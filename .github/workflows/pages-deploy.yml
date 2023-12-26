@@ -39,10 +39,10 @@ jobs:
         uses: actions/configure-pages@v3
 
       - name: Setup Ruby
-        uses: ruby/setup-ruby@v2
+        uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3
-          bundler-cache: true
+          bundler-cache: false
 
       - name: Build site
         run: bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"
